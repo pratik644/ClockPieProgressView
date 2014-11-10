@@ -1,32 +1,23 @@
 //
-//  SKAppDelegate.m
-//  SKSinglePie
+//  WCPieView.m
+//  WCSinglePie
 //
-//  Created by Nik on 23/08/13.
-//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
+//  Created by Pratik on 07/11/14.
+//  Copyright (c) 2014 Wickr Inc. All rights reserved.
 //
 
-#import "SKAppDelegate.h"
+#import "WCAppDelegate.h"
+#import "WCViewController.h"
 
-#import "SKViewController.h"
-
-@implementation SKAppDelegate
+@implementation WCAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
-- (void)dealloc
-{
-    [_window release];
-    [_viewController release];
-    [super dealloc];
-}
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[[SKViewController alloc] initWithNibName:@"SKViewController" bundle:nil] autorelease];
+    self.viewController = [[WCViewController alloc] initWithNibName:@"WCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

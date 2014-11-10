@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		318522901A11541D00224F30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3185228F1A11541D00224F30 /* main.m */; };
+		318522921A11542D00224F30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318522911A11542D00224F30 /* Images.xcassets */; };
+		318522961A11546400224F30 /* WCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318522941A11546400224F30 /* WCViewController.xib */; };
+		318522991A11547000224F30 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 318522971A11547000224F30 /* InfoPlist.strings */; };
+		3185229E1A11548B00224F30 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3185229B1A11548B00224F30 /* WCAppDelegate.m */; };
+		3185229F1A11548B00224F30 /* WCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3185229D1A11548B00224F30 /* WCViewController.m */; };
+		318522A21A11549700224F30 /* WCPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 318522A11A11549700224F30 /* WCPieProgressView.m */; };
+		5792355B17C71A2300A78D34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5792355A17C71A2300A78D34 /* UIKit.framework */; };
+		5792355D17C71A2300A78D34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5792355C17C71A2300A78D34 /* Foundation.framework */; };
+		5792355F17C71A2300A78D34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5792355E17C71A2300A78D34 /* CoreGraphics.framework */; };
+		5792357B17C71D9C00A78D34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5792357A17C71D9C00A78D34 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3185228F1A11541D00224F30 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WCPieProgress/main.m; sourceTree = SOURCE_ROOT; };
+		318522911A11542D00224F30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WCPieProgress/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		318522951A11546400224F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = WCPieProgress/en.lproj/WCViewController.xib; sourceTree = SOURCE_ROOT; };
+		318522981A11547000224F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = WCPieProgress/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		3185229A1A11548B00224F30 /* WCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCAppDelegate.h; path = WCPieProgress/WCAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		3185229B1A11548B00224F30 /* WCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCAppDelegate.m; path = WCPieProgress/WCAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		3185229C1A11548B00224F30 /* WCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCViewController.h; path = WCPieProgress/WCViewController.h; sourceTree = SOURCE_ROOT; };
+		3185229D1A11548B00224F30 /* WCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCViewController.m; path = WCPieProgress/WCViewController.m; sourceTree = SOURCE_ROOT; };
+		318522A01A11549700224F30 /* WCPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WCPieProgressView.h; path = WCPieProgress/WCPieProgressView.h; sourceTree = SOURCE_ROOT; };
+		318522A11A11549700224F30 /* WCPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WCPieProgressView.m; path = WCPieProgress/WCPieProgressView.m; sourceTree = SOURCE_ROOT; };
+		318522A31A1154A400224F30 /* WCPieProgress-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WCPieProgress-Info.plist"; path = "WCPieProgress/WCPieProgress-Info.plist"; sourceTree = SOURCE_ROOT; };
+		318522A51A1154B000224F30 /* WCPieProgress-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WCPieProgress-Prefix.pch"; path = "WCPieProgress/WCPieProgress-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		5792355617C71A2300A78D34 /* WCPieProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCPieProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5792355A17C71A2300A78D34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5792355C17C71A2300A78D34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5792355E17C71A2300A78D34 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5792357A17C71D9C00A78D34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5792355317C71A2300A78D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5792357B17C71D9C00A78D34 /* QuartzCore.framework in Frameworks */,
+				5792355B17C71A2300A78D34 /* UIKit.framework in Frameworks */,
+				5792355D17C71A2300A78D34 /* Foundation.framework in Frameworks */,
+				5792355F17C71A2300A78D34 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		318522811A1114D500224F30 /* PieView */ = {
+			isa = PBXGroup;
+			children = (
+				318522A01A11549700224F30 /* WCPieProgressView.h */,
+				318522A11A11549700224F30 /* WCPieProgressView.m */,
+			);
+			name = PieView;
+			sourceTree = "<group>";
+		};
+		318522821A1114E800224F30 /* ContainerApp */ = {
+			isa = PBXGroup;
+			children = (
+				3185229A1A11548B00224F30 /* WCAppDelegate.h */,
+				3185229B1A11548B00224F30 /* WCAppDelegate.m */,
+				3185229C1A11548B00224F30 /* WCViewController.h */,
+				3185229D1A11548B00224F30 /* WCViewController.m */,
+				318522941A11546400224F30 /* WCViewController.xib */,
+			);
+			name = ContainerApp;
+			sourceTree = "<group>";
+		};
+		5792354B17C71A2300A78D34 = {
+			isa = PBXGroup;
+			children = (
+				5792356017C71A2300A78D34 /* WCPieProgress */,
+				5792355917C71A2300A78D34 /* Frameworks */,
+				5792355717C71A2300A78D34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5792355717C71A2300A78D34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5792355617C71A2300A78D34 /* WCPieProgress.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5792355917C71A2300A78D34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5792357A17C71D9C00A78D34 /* QuartzCore.framework */,
+				5792355A17C71A2300A78D34 /* UIKit.framework */,
+				5792355C17C71A2300A78D34 /* Foundation.framework */,
+				5792355E17C71A2300A78D34 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5792356017C71A2300A78D34 /* WCPieProgress */ = {
+			isa = PBXGroup;
+			children = (
+				318522811A1114D500224F30 /* PieView */,
+				318522821A1114E800224F30 /* ContainerApp */,
+				318522911A11542D00224F30 /* Images.xcassets */,
+				5792356117C71A2300A78D34 /* Supporting Files */,
+			);
+			name = WCPieProgress;
+			path = SKSinglePie;
+			sourceTree = "<group>";
+		};
+		5792356117C71A2300A78D34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				318522A31A1154A400224F30 /* WCPieProgress-Info.plist */,
+				318522971A11547000224F30 /* InfoPlist.strings */,
+				318522A51A1154B000224F30 /* WCPieProgress-Prefix.pch */,
+				3185228F1A11541D00224F30 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5792355517C71A2300A78D34 /* WCPieProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5792357417C71A2300A78D34 /* Build configuration list for PBXNativeTarget "WCPieProgress" */;
+			buildPhases = (
+				5792355217C71A2300A78D34 /* Sources */,
+				5792355317C71A2300A78D34 /* Frameworks */,
+				5792355417C71A2300A78D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WCPieProgress;
+			productName = SKSinglePie;
+			productReference = 5792355617C71A2300A78D34 /* WCPieProgress.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5792354D17C71A2300A78D34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SK;
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					5792355517C71A2300A78D34 = {
+						DevelopmentTeam = W8RC3R952A;
+					};
+				};
+			};
+			buildConfigurationList = 5792355017C71A2300A78D34 /* Build configuration list for PBXProject "WCPieProgress" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5792354B17C71A2300A78D34;
+			productRefGroup = 5792355717C71A2300A78D34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5792355517C71A2300A78D34 /* WCPieProgress */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5792355417C71A2300A78D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				318522921A11542D00224F30 /* Images.xcassets in Resources */,
+				318522991A11547000224F30 /* InfoPlist.strings in Resources */,
+				318522961A11546400224F30 /* WCViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5792355217C71A2300A78D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3185229F1A11548B00224F30 /* WCViewController.m in Sources */,
+				318522A21A11549700224F30 /* WCPieProgressView.m in Sources */,
+				3185229E1A11548B00224F30 /* WCAppDelegate.m in Sources */,
+				318522901A11541D00224F30 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		318522941A11546400224F30 /* WCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				318522951A11546400224F30 /* en */,
+			);
+			name = WCViewController.xib;
+			sourceTree = "<group>";
+		};
+		318522971A11547000224F30 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				318522981A11547000224F30 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5792357217C71A2300A78D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5792357317C71A2300A78D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5792357517C71A2300A78D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WCPieProgress/WCPieProgress-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/WCPieProgress/WCPieProgress-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = WCPieProgress;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5792357617C71A2300A78D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WCPieProgress/WCPieProgress-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/WCPieProgress/WCPieProgress-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = WCPieProgress;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5792355017C71A2300A78D34 /* Build configuration list for PBXProject "WCPieProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5792357217C71A2300A78D34 /* Debug */,
+				5792357317C71A2300A78D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5792357417C71A2300A78D34 /* Build configuration list for PBXNativeTarget "WCPieProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5792357517C71A2300A78D34 /* Debug */,
+				5792357617C71A2300A78D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5792354D17C71A2300A78D34 /* Project object */;
+}

@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'SKSinglePie' target in the 'SKSinglePie' project
+// Prefix header for all source files of the 'WCSinglePie' target in the 'WCSinglePie' project
 //
 
 #import <Availability.h>
