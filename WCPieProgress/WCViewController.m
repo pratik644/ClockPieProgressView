@@ -11,12 +11,13 @@
 
 @interface WCViewController ()
 
+@property (nonatomic, strong) NSTimer *animationTimer;
 @property (nonatomic) BOOL isTimerValid;
 @property (nonatomic, strong) IBOutlet WCPieProgressView *pieView;
-@property (nonatomic, strong) NSTimer *animationTimer;
 @property (nonatomic, strong) IBOutlet UIButton *timerButton;
 @property (nonatomic, strong) IBOutlet UISlider *radiusSlider;
 @property (nonatomic, strong) IBOutlet UISlider *progressSlider;
+@property (nonatomic, strong) IBOutlet UISlider *strokeWidthSlider;
 
 @end
 
@@ -34,6 +35,7 @@ static int progress = 0;
     self.pieView.strokeWidth = 1.0f;
     self.pieView.strokeColor = [UIColor redColor];
     [self.radiusSlider setValue:self.height.constant];
+    [self.strokeWidthSlider setValue:self.pieView.strokeWidth];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -91,6 +93,11 @@ static int progress = 0;
         [self.timerButton setTitle:@"Start" forState:UIControlStateNormal];
     }
     progress = self.progressSlider.value;
+    [self.pieView updateViewForSelectedPercentage:progress];
+}
+
+- (IBAction) strokeWidthSliderValueChanged {
+    self.pieView.strokeWidth = self.strokeWidthSlider.value;
     [self.pieView updateViewForSelectedPercentage:progress];
 }
 

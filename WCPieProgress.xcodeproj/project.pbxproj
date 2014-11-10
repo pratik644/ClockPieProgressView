@@ -109,7 +109,6 @@
 			children = (
 				318522811A1114D500224F30 /* PieView */,
 				318522821A1114E800224F30 /* ContainerApp */,
-				318522911A11542D00224F30 /* Images.xcassets */,
 				5792356117C71A2300A78D34 /* Supporting Files */,
 			);
 			name = WCPieProgress;
@@ -119,6 +118,7 @@
 		5792356117C71A2300A78D34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				318522911A11542D00224F30 /* Images.xcassets */,
 				318522A31A1154A400224F30 /* WCPieProgress-Info.plist */,
 				318522971A11547000224F30 /* InfoPlist.strings */,
 				318522A51A1154B000224F30 /* WCPieProgress-Prefix.pch */,
