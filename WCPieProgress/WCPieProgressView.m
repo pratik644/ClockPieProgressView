@@ -1,6 +1,6 @@
 //
 //  WCPieProgressView.m
-//  WCPieProgressViewController
+//  Wickr
 //
 //  Created by Pratik P. on 11/10/14.
 //
@@ -9,7 +9,7 @@
 #import "WCPieProgressView.h"
 
 @interface WCPieProgressView()
-
+@property (nonatomic, assign) CGFloat progress;
 - (CAShapeLayer *) createPieSliceForRadian:(CGFloat)angle;
 
 @end
@@ -19,18 +19,25 @@
 - (instancetype)init {
     self = [super init];
     if(self) {
-        self.backgroundColor = [UIColor clearColor];
         self.fillColor = [UIColor clearColor];
         self.strokeColor = self.tintColor;
         self.strokeWidth = 1.0f;
+        self.opaque = NO;
     }
     return self;
+}
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextClearRect(context, rect);
+    [self updateViewForSelectedPercentage:self.progress];
 }
 
 #pragma mark - Public methods
 
 - (void)updateViewForSelectedPercentage:(CGFloat)selectedPercentage {
-    
+    self.progress = selectedPercentage;
     //bring percentage in range 0 to 100
     if(selectedPercentage < 0) {
         selectedPercentage = 0.0;
@@ -39,9 +46,6 @@
     if(selectedPercentage > 100) {
         selectedPercentage = 100;
     }
-    
-    //calls draw rect - if radius cahnged or if u want to change color etc.
-    [self setNeedsLayout];
     
     CGFloat angle = (selectedPercentage * 2*M_PI)/100;
     
@@ -62,8 +66,8 @@
     slice.strokeColor = self.strokeColor.CGColor;
     slice.lineWidth = self.strokeWidth;
     
-    CGPoint center = CGPointMake(self.frame.size.width/2, self.frame.size.width/2);
-    CGFloat radius = self.frame.size.width;
+    CGPoint center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+    CGFloat radius = self.bounds.size.width/2;
     
     UIBezierPath *piePath = [UIBezierPath bezierPath];
     [piePath moveToPoint:CGPointMake(center.x + (radius-((radius*37.5f)/100)) * cosf(angle), center.y + (radius-((radius*37.5f)/100)) * sinf(angle))];
@@ -83,8 +87,8 @@
     [slice setPosition:CGPointMake(0.5f, 0.5f)];
     CGFloat startAngle = -M_PI_2;
     
-    CGPoint center = CGPointMake(self.frame.size.width/2, self.frame.size.width/2);
-    CGFloat radius = self.frame.size.width;
+    CGPoint center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+    CGFloat radius = self.bounds.size.width/2;
     
     UIBezierPath *piePath = [UIBezierPath bezierPath];
     [piePath moveToPoint:center];

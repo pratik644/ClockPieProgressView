@@ -82,7 +82,7 @@ static int progress = 0;
     progress = 100-progress;
     [self.progressSlider setValue:progress];
     self.pieView.isReversed = !self.pieView.isReversed;
-    [self.pieView layoutIfNeeded];
+//    [self.pieView layoutIfNeeded];
     [self.pieView updateViewForSelectedPercentage:progress];
 }
 

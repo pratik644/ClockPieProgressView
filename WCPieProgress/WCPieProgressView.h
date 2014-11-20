@@ -1,6 +1,6 @@
 //
 //  WCPieProgressView.h
-//  WCPieProgressViewController
+//  Wickr
 //
 //  Created by Pratik P. on 11/10/14.
 //
