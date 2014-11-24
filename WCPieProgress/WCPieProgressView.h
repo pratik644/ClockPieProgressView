@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIColor *strokeColor;
 @property (nonatomic) float strokeWidth;
 @property (nonatomic) BOOL isReversed;
+@property (nonatomic) BOOL showTicks;
+@property (nonatomic) BOOL showShadow;
 
 - (void)updateViewForSelectedPercentage:(CGFloat)selectedPercentage;
 

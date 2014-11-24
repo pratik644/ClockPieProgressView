@@ -20,7 +20,21 @@
 		5792357B17C71D9C00A78D34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5792357A17C71D9C00A78D34 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		317D4EEF1A1E973D002A1527 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		317D4ECB1A1E973C002A1527 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		3185228F1A11541D00224F30 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WCPieProgress/main.m; sourceTree = SOURCE_ROOT; };
 		318522911A11542D00224F30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WCPieProgress/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		318522951A11546400224F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = WCPieProgress/en.lproj/WCViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -100,6 +114,7 @@
 				5792355A17C71A2300A78D34 /* UIKit.framework */,
 				5792355C17C71A2300A78D34 /* Foundation.framework */,
 				5792355E17C71A2300A78D34 /* CoreGraphics.framework */,
+				317D4ECB1A1E973C002A1527 /* WatchKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,6 +152,7 @@
 				5792355217C71A2300A78D34 /* Sources */,
 				5792355317C71A2300A78D34 /* Frameworks */,
 				5792355417C71A2300A78D34 /* Resources */,
+				317D4EEF1A1E973D002A1527 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);

@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WCPieProgress Watch App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>317D4EC91A1E973C002A1527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>317D4EDA1A1E973D002A1527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5792355517C71A2300A78D34</key>
 		<dict>
 			<key>primary</key>

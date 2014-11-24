@@ -8,6 +8,8 @@
 
 #import "WCViewController.h"
 #import "WCPieProgressView.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface WCViewController ()
 
@@ -18,6 +20,9 @@
 @property (nonatomic, strong) IBOutlet UISlider *radiusSlider;
 @property (nonatomic, strong) IBOutlet UISlider *progressSlider;
 @property (nonatomic, strong) IBOutlet UISlider *strokeWidthSlider;
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *strokeColorButtons;
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *fillColorButtons;
+@property (nonatomic, strong) IBOutlet UISwitch *ticks;
 
 @end
 
@@ -31,11 +36,26 @@ static int progress = 0;
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.height.constant = 15;
+    self.height.constant = 30;
     self.pieView.strokeWidth = 1.0f;
     self.pieView.strokeColor = [UIColor redColor];
     [self.radiusSlider setValue:self.height.constant];
     [self.strokeWidthSlider setValue:self.pieView.strokeWidth];
+    [self.pieView setShowTicks:NO];
+    
+    for(UIButton *button in self.strokeColorButtons) {
+        button.layer.cornerRadius = 20;
+        button.layer.shadowOffset = CGSizeMake(3, 3);
+        button.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+        button.layer.shadowOpacity = 1.0f;
+    }
+    
+    for(UIButton *button in self.fillColorButtons) {
+        button.layer.cornerRadius = 20;
+        button.layer.shadowOffset = CGSizeMake(3, 3);
+        button.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+        button.layer.shadowOpacity = 1.0f;
+    }
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -79,10 +99,9 @@ static int progress = 0;
 }
 
 - (IBAction) flipProgress {
-    progress = 100-progress;
+    progress = 100 - progress;
     [self.progressSlider setValue:progress];
     self.pieView.isReversed = !self.pieView.isReversed;
-//    [self.pieView layoutIfNeeded];
     [self.pieView updateViewForSelectedPercentage:progress];
 }
 
@@ -116,6 +135,32 @@ static int progress = 0;
     else {
         [self reset];
     }
+}
+
+- (IBAction)setDefaults {
+    self.pieView.fillColor = [UIColor clearColor];
+    self.pieView.strokeColor = [UIColor redColor];
+    [self.pieView updateViewForSelectedPercentage:progress];
+}
+
+- (IBAction) setTint:(id)sender {
+    self.pieView.strokeColor = ((UIButton*)sender).backgroundColor;
+    [self.pieView updateViewForSelectedPercentage:progress];
+}
+
+- (IBAction) setFill:(id)sender {
+    self.pieView.fillColor = ((UIButton*)sender).backgroundColor;
+    [self.pieView updateViewForSelectedPercentage:progress];
+}
+
+- (IBAction)showTicks:(id)sender {
+    [self.pieView setShowTicks:!self.pieView.showTicks];
+    [self.pieView updateViewForSelectedPercentage:progress];
+}
+
+- (IBAction)showShadow:(id)sender {
+    [self.pieView setShowShadow:!self.pieView.showShadow];
+    [self.pieView updateViewForSelectedPercentage:progress];
 }
 
 @end

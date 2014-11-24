@@ -23,6 +23,7 @@
         self.strokeColor = self.tintColor;
         self.strokeWidth = 1.0f;
         self.opaque = NO;
+        self.showTicks = YES;
     }
     return self;
 }
@@ -96,10 +97,14 @@
     [piePath addArcWithCenter:center radius:radius startAngle:startAngle endAngle:(angle - M_PI_2) clockwise:YES];
     [piePath closePath]; // this will automatically add a straight line to the center
     
+    
     CGMutablePathRef combinedPath = CGPathCreateMutableCopy(piePath.CGPath);
-    for(float i = 0; i < 360.0f; i = i + 45.0f) {
-        if(radius > 0) {
-            CGPathAddPath(combinedPath, NULL, [self drawTickAtAngle:((i) / 180.0 * M_PI)].CGPath);
+    
+    if(self.showTicks) {
+        for(float i = 0; i < 360.0f; i = i + 45.0f) {
+            if(radius > 0) {
+                CGPathAddPath(combinedPath, NULL, [self drawTickAtAngle:((i) / 180.0 * M_PI)].CGPath);
+            }
         }
     }
     
@@ -113,25 +118,43 @@
                                                           clockwise:YES];
         
         CGMutablePathRef combinedPath = CGPathCreateMutableCopy(bPath.CGPath);
-        for(float i = 0; i < 360.0f; i = i + 45.0f) {
-            if(radius > 0) {
-                CGPathAddPath(combinedPath, NULL, [self drawTickAtAngle:((i) / 180.0 * M_PI)].CGPath);
+        
+        if(self.showTicks) {
+            for(float i = 0; i < 360.0f; i = i + 45.0f) {
+                if(radius > 0) {
+                    CGPathAddPath(combinedPath, NULL, [self drawTickAtAngle:((i) / 180.0 * M_PI)].CGPath);
+                }
             }
         }
+        
         slice.path = combinedPath;
     }
     
     if (angle <= 0) {
         UIBezierPath *aPath = [[UIBezierPath alloc] init];
         CGMutablePathRef combinedPath = CGPathCreateMutableCopy(aPath.CGPath);
-        for(float i = 0; i < 360.0f; i = i + 45.0f) {
-            CGPathAddPath(combinedPath, NULL, [self drawTickAtAngle:((i) / 180.0 * M_PI)].CGPath);
+        
+        if(self.showTicks) {
+            for(float i = 0; i < 360.0f; i = i + 45.0f) {
+                CGPathAddPath(combinedPath, NULL, [self drawTickAtAngle:((i) / 180.0 * M_PI)].CGPath);
+            }
         }
         slice.path = combinedPath;
     }
     
+    if(self.showShadow) {
+        slice.shadowOffset = CGSizeMake(2, 2);
+        slice.shadowColor = [UIColor darkGrayColor].CGColor;
+        slice.shadowOpacity = 1.0f;
+    }
+    
     if(self.isReversed) {
         slice.transform = CATransform3DTranslate(CATransform3DRotate(CATransform3DMakeTranslation(self.frame.size.width/2, 0, 0), M_PI, 0, 1, 0), -self.frame.size.width/2, 0, 0);
+        if(self.showShadow) {
+            slice.shadowOffset = CGSizeMake(-2, 2);
+            slice.shadowColor = [UIColor darkGrayColor].CGColor;
+            slice.shadowOpacity = 1.0f;
+        }
     }
     
     return slice;
